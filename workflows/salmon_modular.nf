@@ -18,8 +18,7 @@ workflow SALMON {
 
 	main:
 		SALMON_INDEX ( transcriptome )
-		SALMON_QUANT ( SALMON_INDEX.out.first(), reads1, reads2 )
-		println('hello')
+		SALMON_QUANT ( reads1, reads2, SALMON_INDEX.out.first() )
 
 	emit: SALMON_QUANT.out
 
