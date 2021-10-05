@@ -19,7 +19,7 @@ process SALMON_QUANT {
   -l A \\
   -1 "${read1}" \\
   -2 "${read2}" \\
-  "${cores}" \\
+  $cores \\
   --validateMappings \\
   -o "quants/${read1.baseName.split('_')[0]}_quant"
   """
